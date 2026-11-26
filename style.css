@@ -19,8 +19,8 @@
 }
 /* Fond clair imposé pour tous les visiteurs : blanc cassé tirant vers le beige */
 :root,:root[data-theme]{
-  --bg:#f6f1e9; --surface:#fffdf9; --tint:#efe6da; --ink:#3d3735; --muted:#6b625d;
-  --line:#e3d6c8; --accent:#a5503c; --accent-ink:#ffffff; --warm:#c66a53; --warm-soft:#f6e5dc; --coral:#c66a53;
+  --bg:#faf7f2; --surface:#ffffff; --tint:#ece0cf; --ink:#3d3735; --muted:#6b625d;
+  --line:#e0d1bf; --accent:#a5503c; --accent-ink:#ffffff; --warm:#c66a53; --warm-soft:#f4ddd1; --coral:#c66a53;
   color-scheme:light;
 }
 *{box-sizing:border-box}

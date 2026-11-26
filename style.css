@@ -17,8 +17,9 @@
   --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
   --radius:12px;
 }
-@media (prefers-color-scheme: dark){
-  :root:not([data-theme="light"]){
+/* Mode sombre imposé pour tous les visiteurs */
+@media all{
+  :root{
     --bg:#1e1a19; --surface:#272221; --tint:#2e2523; --ink:#f1e9e6; --muted:#bdb2ae;
     --line:#3e3431; --accent:#e3957f; --accent-ink:#1e1a19; --warm:#d27a63; --warm-soft:#332825; --coral:#c66a53;
     color-scheme:dark;

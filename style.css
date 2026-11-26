@@ -318,3 +318,35 @@ section[id],[id="fiches"]{scroll-margin-top:150px}
 .print-brand{display:none}
 @media print{.print-brand{display:block;font-family:var(--display);letter-spacing:.12em;text-transform:uppercase;font-size:.8rem;color:#a5503c;border-bottom:1px solid #ddd;padding-bottom:8px;margin-bottom:8px}}
 @media (max-width:560px){.phero::after{display:none}}
+/* Comment nous trouver */
+.findus{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;display:flex;flex-direction:column;gap:10px;max-width:420px}
+.findus-label{font-size:.78rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--accent)}
+.findus ul{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:10px}
+.findus li{display:flex;align-items:center;gap:12px;font-size:.95rem}
+.findus .ico{flex:none;width:34px;height:34px;border-radius:50%;background:var(--warm-soft);color:var(--accent);display:grid;place-items:center}
+.findus a{color:var(--ink);text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:4px}
+/* Menu mobile : rubriques principales en gras, groupes dépliables */
+.burger nav a.mtop,.burger .mgrp summary{font-weight:600;color:var(--ink)}
+.burger .mgrp summary{border:0;border-radius:8px;list-style:none;cursor:pointer;padding:9px 10px;border-radius:8px;display:flex;justify-content:space-between;align-items:center}
+.burger .mgrp summary::-webkit-details-marker{display:none}
+.burger .mgrp summary::after{content:"";width:7px;height:7px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg);transition:transform .2s;margin-right:4px}
+.burger .mgrp[open] summary::after{transform:rotate(-135deg)}
+.burger .mgrp[open] summary{color:var(--accent)}
+.burger .mgrp a.msub{display:block;padding-left:24px;font-weight:400}
+/* Téléphone : textes centrés, pictos à côté des titres */
+@media (max-width:700px){
+  .hero-text,.head,.phero .wrap,.cta-in,.cta-in>div:first-child{text-align:center;align-items:center}
+  .hero-text .actions,.cta .actions,.fiche-tools{justify-content:center}
+  .hero-text .actions .btn{width:100%;justify-content:center}
+  .findus{align-self:stretch;max-width:none;text-align:left}
+  .findus-label{text-align:center}
+  .point{display:grid;grid-template-columns:36px auto;justify-content:center;align-items:center;column-gap:12px;row-gap:8px;text-align:center}
+  .point h3{text-align:left}
+  .point p{grid-column:1/-1}
+  .point h3 br{display:none}
+  .card,.person{text-align:center}
+  .card .devices,.card details{text-align:left}
+  .person{flex-direction:column}
+  .team-note{text-align:center}
+  .crumb{justify-content:center}
+}

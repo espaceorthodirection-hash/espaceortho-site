@@ -1,44 +1,46 @@
 
-/* Layout : en-tête collant, héros en deux colonnes avec l'arcade dentaire dessinée, puis des sections pleine largeur alternant fond clair et fond teinté. */
+/* Charte de la carte de visite : blanc cassé, corail Espace Ortho, gris doux ; Montserrat en capitales espacées, Cormorant Garamond en italique ; arcs corail en motif. */
 :root{
-  --bg:#fbfaf7;          /* blanc chaud */
+  --bg:#fbfaf7;          /* blanc cassé de la carte */
   --surface:#ffffff;
-  --tint:#eaf3f1;        /* vert d'eau très pâle */
-  --ink:#1d3b44;         /* bleu-vert profond */
-  --muted:#55707a;
-  --line:#d6e3e1;
-  --accent:#2f7d7a;      /* sarcelle */
+  --tint:#f7ece8;        /* corail très pâle */
+  --ink:#3d3735;         /* gris chaud */
+  --muted:#6b6b6b;
+  --line:#ecdcd6;
+  --accent:#b85c4a;      /* corail foncé, lisible pour les boutons */
   --accent-ink:#ffffff;
-  --warm:#f0b46a;        /* abricot, touches chaleureuses */
-  --warm-soft:#fcefdc;
-  --display:"Bricolage Grotesque", "Avenir Next", "Segoe UI", sans-serif;
-  --body:"Figtree", "Segoe UI", "Helvetica Neue", Arial, sans-serif;
-  --radius:14px;
+  --warm:#d77a68;        /* corail du logo */
+  --warm-soft:#fbeee9;
+  --coral:#d77a68;
+  --display:"Montserrat", "Avenir Next", "Segoe UI", sans-serif;
+  --body:"Montserrat", "Avenir Next", "Segoe UI", sans-serif;
+  --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
+  --radius:12px;
 }
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
-    --bg:#10201f; --surface:#162b2a; --tint:#1a3331; --ink:#e7f1ef; --muted:#a7bfbd;
-    --line:#2a4644; --accent:#6cc3bd; --accent-ink:#0d1d1c; --warm:#f2bd7c; --warm-soft:#2e2a20;
+    --bg:#1e1a19; --surface:#272221; --tint:#2e2523; --ink:#f1e9e6; --muted:#bdb2ae;
+    --line:#3e3431; --accent:#e08b79; --accent-ink:#1e1a19; --warm:#e08b79; --warm-soft:#332825; --coral:#d77a68;
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#10201f; --surface:#162b2a; --tint:#1a3331; --ink:#e7f1ef; --muted:#a7bfbd;
-  --line:#2a4644; --accent:#6cc3bd; --accent-ink:#0d1d1c; --warm:#f2bd7c; --warm-soft:#2e2a20;
+  --bg:#1e1a19; --surface:#272221; --tint:#2e2523; --ink:#f1e9e6; --muted:#bdb2ae;
+  --line:#3e3431; --accent:#e08b79; --accent-ink:#1e1a19; --warm:#e08b79; --warm-soft:#332825; --coral:#d77a68;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
-body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
-h1,h2,h3{font-family:var(--display);line-height:1.15;text-wrap:balance;margin:0}
-h1{font-size:clamp(2.1rem,5vw,3.4rem);font-weight:700;letter-spacing:-.01em}
-h2{font-size:clamp(1.6rem,3.2vw,2.2rem);font-weight:700}
-h3{font-size:1.25rem;font-weight:500}
+body{background:var(--bg);color:var(--ink);font-family:var(--body);font-size:16px;line-height:1.7}
+h1,h2,h3{font-family:var(--display);line-height:1.2;text-wrap:balance;margin:0;font-weight:500;letter-spacing:.01em}
+h1{font-size:clamp(1.9rem,4.4vw,3rem);font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--accent)}
+h2{font-size:clamp(1.4rem,2.8vw,1.9rem);font-weight:500}
+h3{font-size:1.08rem;font-weight:600}
 p{margin:0}
 a{color:var(--accent)}
 a:focus-visible,button:focus-visible{outline:3px solid var(--warm);outline-offset:3px;border-radius:6px}
 .wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-.eyebrow{font-size:.8rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
-.lead{color:var(--muted);font-size:1.1rem;max-width:60ch}
+.eyebrow{font-size:.75rem;font-weight:500;letter-spacing:.22em;text-transform:uppercase;color:var(--warm)}
+.lead{color:var(--muted);font-family:var(--serif);font-style:italic;font-size:1.35rem;line-height:1.45;max-width:58ch}
 
 /* Bandeau maquette */
 .proto{background:var(--warm-soft);color:var(--ink);font-size:.85rem;text-align:center;padding-block:6px}
@@ -229,3 +231,32 @@ nav.main{align-items:center}
 .cta-in>div:first-child{display:flex;flex-direction:column;gap:6px;min-width:0}
 .cta .btn.primary{background:var(--warm);border-color:var(--warm);color:#1d3b44}
 .cta .btn.ghost{color:var(--bg);border-color:var(--bg)}
+
+/* --- Charte carte de visite --- */
+.brand{flex-direction:column;align-items:flex-start;gap:0}
+.wordmark{font-family:var(--display);text-transform:uppercase;color:var(--warm);font-size:1.3rem;line-height:1.1;letter-spacing:.14em}
+.wm1{font-weight:300} .wm2{font-weight:600}
+.brand small{letter-spacing:.12em;text-transform:uppercase;font-size:.66rem}
+.btn{border-radius:4px;letter-spacing:.06em;font-weight:500;text-transform:uppercase;font-size:.8rem;padding:12px 18px}
+.btn.sm{font-size:.74rem;padding:9px 14px}
+.hero{position:relative;overflow:hidden}
+.hero .wrap{position:relative;z-index:1}
+.hero-logo{justify-self:center;width:100%;max-width:420px;aspect-ratio:1/1;border-radius:50%;background:var(--coral);display:grid;place-items:center;padding:14%}
+.hero-logo img{width:100%;height:auto;max-width:100%}
+@media (max-width:800px){.hero-logo{max-width:260px}}
+.phero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--tint),var(--bg))}
+.phero::after{content:"";position:absolute;right:-30px;bottom:-40px;width:300px;height:175px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 380 220'%3E%3Cpath d='M0 220 A300 300 0 0 1 180 0' fill='none' stroke='%23d77a68' stroke-width='14'/%3E%3Cpath d='M180 0 A300 300 0 0 1 380 90' fill='none' stroke='%23d77a68' stroke-width='3'/%3E%3C/svg%3E") no-repeat;background-size:contain;pointer-events:none;opacity:.85}
+.phero .wrap{position:relative;z-index:1}
+.cta{background:var(--coral);color:#fff}
+.cta h2{color:#fff}
+.cta .btn.primary{background:#fff;border-color:#fff;color:#b85c4a}
+.cta .btn.ghost{color:#fff;border-color:#fff}
+.facts li::before{background:var(--warm)}
+.portrait{border-color:var(--warm);color:var(--warm);font-family:var(--display);font-weight:300}
+.devices summary::before{border-left-color:var(--warm)}
+.timeline li>span,.steps li span{background:var(--warm);color:#fff}
+.signs li::before{background:var(--warm)}
+.signs.check li::before{background:var(--accent)}
+footer{background:#3d3735;color:#fbfaf7}
+footer a{color:#fbfaf7}
+.mobilebar .btn{padding:9px 8px}

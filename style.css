@@ -224,6 +224,7 @@ nav.main{align-items:center}
 .mgroup{padding:10px 10px 2px;font-size:.75rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .burger nav a.msub{padding-left:22px}
 .btn.itin{align-self:flex-start;margin-top:4px}
+.facts-label{font-size:.9rem;font-weight:600;color:var(--muted);margin-bottom:-12px}
 .cta-in{display:flex;flex-wrap:wrap;gap:20px;align-items:center;justify-content:space-between}
 .cta-in>div:first-child{display:flex;flex-direction:column;gap:6px;min-width:0}
 .cta .btn.primary{background:var(--warm);border-color:var(--warm);color:#1d3b44}

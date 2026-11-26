@@ -269,3 +269,11 @@ nav.main{align-items:center}
 footer{background:#3d3735;color:#fbfaf7}
 footer a{color:#fbfaf7}
 .mobilebar .btn{padding:9px 8px}
+.fiche .todo{align-self:flex-start;margin-top:auto}
+/* En-tête sur deux lignes : logo + boutons, puis navigation */
+header.site .brand{order:0}
+header.site .actions{order:1;margin-left:auto;display:flex;gap:8px}
+header.site .burger{order:2}
+header.site nav.main{order:3;flex-basis:100%;justify-content:flex-start;padding-top:10px;border-top:1px solid var(--line)}
+@media (min-width:1181px){nav.main a{font-size:.95rem}nav.main{gap:26px}}
+@media (max-width:560px){header.site .actions{display:none}}
